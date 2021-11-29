@@ -1,0 +1,79 @@
+header {
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+}
+
+.social {
+  text-align: right;
+  padding-top: 25px;
+  margin-bottom: 20px;
+}
+
+.social a:last-child {
+  position: relative;
+  padding: 10px 20px 10px 50px;
+  border: 1px solid $accent;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.social a:last-child::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 25%;
+  left: 15px;
+  background-image: url("../img/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social a:first-child {
+  position: relative;
+  font-size: 0;
+}
+
+.social a:first-child::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  top: -17px;
+  left: -55px;
+  background-image: url("../img/whatsapp.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav li {
+  position: relative;
+  margin-right: 50px;
+  font-size: 16px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav li::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  bottom: -8px;
+  left: 0;
+  background-color: transparent;
+  transition: background-color 0.4s;
+}
+
+nav li:hover::before {
+  background-color: $accent;
+}
